@@ -1,6 +1,8 @@
 package com.bridgelabz.addressbookapp.dto;
 
 
+import org.springframework.data.annotation.Id;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -12,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AddressBookDTO {
+	@Id
 	@NotNull
 	@Pattern(regexp = "^[A-Z]{1}[a-zA-Z]{2,}$", message = "Invalid Name")
 	private String name;

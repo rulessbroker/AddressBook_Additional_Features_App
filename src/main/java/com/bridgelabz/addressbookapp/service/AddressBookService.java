@@ -40,7 +40,6 @@ public class AddressBookService implements IAddressBookService {
 						+ "\n Email:  " + addressbookData.getEmail() + "\n Address:  " + addressbookData.getAddress()
 						+ "\n City:  " + addressbookData.getCity() + "\n State:  " + addressbookData.getState()
 						+ "\n ZipCode:  " + addressbookData.getZip() + "\n Token: " + token);
-//		email.sendEmail("ramyadav.now@gmail.com", "Address Book", "Works Fine");
 		return addressBookRepository.save(addressbookData);
 	}
 

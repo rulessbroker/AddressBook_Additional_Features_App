@@ -1,24 +1,21 @@
 package com.bridgelabz.addressbookapp.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;	
+
 import com.bridgelabz.addressbookapp.dto.AddressBookDTO;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "addressbook_data")
+@Document(collection = "addressbook")
 @Data
 @NoArgsConstructor
 public class AdderssBookModel {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private int id;
+	@Indexed(unique=true)
 	private String name;
 	private String address;
 	private String city;

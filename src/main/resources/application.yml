@@ -1,0 +1,11 @@
+security:
+  oauth2:
+    client:
+      clientId: c10023a810df210c5f3f
+      clientSecret: 5e0d7774976bfa1f2b23ff70eaab1f9f761e0dde
+      accessTokenUrl: https://github.com/login/oauth/access_token
+      userAuthorizationUrl: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form
+    resource:
+                user-info-url: https://api.github.com/addressbook
+                prefer-token-info: false
